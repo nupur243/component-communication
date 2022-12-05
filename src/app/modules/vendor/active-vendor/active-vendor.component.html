@@ -1,1 +1,29 @@
-<p>active vendor</p>
+
+<h1>Active-Component</h1>
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>age</th>
+        <th>city</th>
+        <th>block</th>
+    </tr>
+    <tr *ngFor="let vendor of input_vendor">
+    
+   <td>{{vendor.name}}</td>
+   <td>{{vendor.age}}</td>
+   <td>{{vendor.city}}</td>
+   <td>
+    <button class="rowButton" (click)="showData(vendor)" >block</button>
+
+   </td>
+        
+    </tr>
+
+</table>--
+
+
+
+
+
