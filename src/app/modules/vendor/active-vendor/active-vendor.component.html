@@ -1,1 +1,16 @@
-<p>active vendor</p>
+<h2>Active Vendor</h2>
+<table class="vendor_table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Block</th>
+    </tr>
+    <tr *ngFor="let vendor of vendors">
+        <td> {{vendor.name}}</td> 
+        <td> {{vendor.age}}</td>
+        <td> {{vendor.city}}</td>
+        <td><button class="blockButton" (click)="sendObject(vendor)">Block</button></td>
+    </tr>
+
+</table>

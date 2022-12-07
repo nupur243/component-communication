@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Vendor } from './Vendor';
 
 @Component({
   selector: 'app-vendor',
