@@ -10,6 +10,7 @@ import { Vendor } from '../Vendor';
 export class ActiveVendorComponent implements OnInit {
   vendors!: Vendor[];
   blocked_vendor!: Vendor;
+  index : number | undefined;
 
   constructor(private _vendorService: VendorServiceService) {  }
 
@@ -21,6 +22,10 @@ export class ActiveVendorComponent implements OnInit {
   {
    this.blocked_vendor=vendor;
    this._vendorService.sendToBlocked(this.blocked_vendor);
+   console.log(this.vendors);
+   this.index = this.vendors.indexOf(vendor);
+   this.vendors.splice(this.index,1);
+
   }
 
 
